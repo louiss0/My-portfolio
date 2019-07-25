@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700|Open+Sans&display=swap');
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 37.5em) {
+			@content;
+		}
+	}
+	@if $breakpoint == tab-port {
+		@media (max-width: 56.25em) {
+			@content;
+		}
+	}
+	@if $breakpoint == tab-land {
+		@media (max-width: 75em) {
+			@content;
+		}
+	}
+	@if $breakpoint == big-desktop {
+		@media (min-width: 112.5em) {
+			@content;
+		}
+	}
+}
+
+@mixin flexCenter($justify, $align) {
+	display: flex;
+	flex-direction: column;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin flexWrap($justify, $align) {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+$textClass: (--lg: 700, --md: 600, --sm: 400);
+
+@each $key, $value in $textClass {
+	.text#{$key} {
+		font-family: var(--primary-font);
+		font-size: var($key);
+		font-weight: $value;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	80% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@mixin fadeIn($duration) {
+	animation: fade-in $duration ease-in forwards;
+}
+
+.icon {
+	width: 2em;
+	height: 2em;
+	&--yellow {
+		fill: var(--yellow);
+	}
+	&:hover {
+		transform: scale(2);
+	}
+	&:active {
+		transform: scale(1);
+	}
+}
