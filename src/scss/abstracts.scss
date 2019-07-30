@@ -53,10 +53,8 @@ $textClass: (--lg: 700, --md: 600, --sm: 400);
 	}
 	80% {
 		opacity: 1;
-		transform: scale(1.2);
 	}
 	100% {
-		transform: scale(1);
 	}
 }
 
@@ -71,7 +69,7 @@ $textClass: (--lg: 700, --md: 600, --sm: 400);
 		fill: var(--yellow);
 	}
 	&:hover {
-		transform: scale(2);
+		transform: scale(1.25);
 	}
 	&:active {
 		transform: scale(1);
