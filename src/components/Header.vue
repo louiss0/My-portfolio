@@ -1,10 +1,8 @@
 <template>
   <header class="resume--header">
     <h1 class="text--lg">{{name}}</h1>
-    <h2 class="text--md">{{number}}</h2>
     <div class="resume--header__info">
-      <h3 class="text--sm">{{email}}</h3>
-      <h3 class="text--sm">{{address}}</h3>
+      <h2>{{line}}</h2>
       <h3 class="text--sm">{{setMonth()}}/{{day}}/{{year}}</h3>
     </div>
   </header>
@@ -19,9 +17,7 @@ export default {
   data() {
     return {
       name: "Shelton louis",
-      number: "646-796-9354",
-      email: "louisshelton0@gmail.com",
-      address: "Brooklyn NY",
+  line: "These are the projects that im proud of",
       day,
       month,
       year

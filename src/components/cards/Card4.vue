@@ -6,15 +6,15 @@
         alt="mountains"
         class="resume__image"
       />
-      <figcaption class="resume__caption">{{cards[3].caption}}</figcaption>
+      <figcaption class="resume__caption">{{card4.caption}}</figcaption>
     </div>
     <div class="resume__card__bottom">
-      <a :href="cards[3].code" target="blank">
+      <a :href="card4.code" target="blank">
         <svg class="icon icon--yellow">
           <use href="../../assets/social/spriteSmedia.svg#icon-github" />
         </svg>
       </a>
-      <a :href="cards[3].site" target="blank">Website</a>
+      <a :href="card4.site" target="blank">Website</a>
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@
 <script>
 export default {
   props: {
-    cards: Array
+    card4: Object
   }
 };
 </script>

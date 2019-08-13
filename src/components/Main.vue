@@ -1,12 +1,12 @@
-<template>
-  <main class="resume--main">
-    <card :cards="cards"></card>
-    <card2 :cards="cards"></card2>
-    <card3 :cards="cards"></card3>
-    <card4 :cards="cards"></card4>
-    <card5 :cards="cards"></card5>
-    <card6 :cards="cards"></card6>
-  </main>
+<template lang="pug" > 
+  main.resume--main
+    <card :card1='cards[0]'/>
+    <card2 :card2='cards[1]'/>
+    <card3 :card3='cards[2]'/>
+    <card4 :card4='cards[3]'/>
+    <card5 :card5='cards[4]'/>
+    <card6 :card6='cards[5]'/>
+      
 </template>
 
 <script>
@@ -21,40 +21,34 @@ export default {
     return {
       cards: [
         {
-          caption: "Mountains",
-          img: "../assets/img/Screenshot_2019-07-23 Document.png",
-          code: "https://github.com/louiss0/Mountains",
-          site: "https://mountains0.netlify.com"
+          caption: "Burger Builder",
+          code: "https://github.com/louiss0/burger-builder",
+          site: "https://burgerbuilderap.netlify.com"
         },
         {
           caption: "Stock Trader",
-          img: "../assets/img/Screenshot_2019-07-23 Stock-trader.png",
           code: "https://github.com/louiss0/stock-trader",
           site: "https://stocktrade.netlify.com"
         },
         {
-          caption: "Fast Pizza",
-          img: "../assets/img/Screenshot_2019-07-23 Fast Pizza.png",
-          code: "https://github.com/louiss0/Fast-Pizza",
-          site: "https://fastpizza.netlify.com"
+          caption: "Pixabay",
+          code: "https://github.com/louiss0/pixabay",
+          site: "https://pixabay-site.netlify.com"
         },
         {
           caption: "Monster Slayer",
-          img: "../assets/img/Screenshot_2019-07-23 Monster Slayer.png",
           code: "https://github.com/louiss0/monster-slayer",
           site: "https://monster-slayer.netlify.com"
         },
         {
           caption: "Users",
-          img: "../assets/img/Screenshot_2019-07-23 users.png",
           code: "https://github.com/louiss0/users",
           site: "https://fiveusers.netlify.com"
         },
         {
-          caption: "To Do List",
-          img: "../assets/img/Screenshot_2019-07-23 ToDO List.png",
-          code: "https://github.com/louiss0/To-Do-List",
-          site: "https://totodo.netlify.com"
+          caption: "Expense App",
+          code: "https://github.com/louiss0/budget-builder",
+          site: "https://expensebudgeter.netlify.com"
         }
       ]
     };
