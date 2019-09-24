@@ -3,6 +3,7 @@
     <h1 class="text--lg">{{name}}</h1>
     <div class="resume--header__info">
       <h2>{{line}}</h2>
+      <a class="download" href="/Shelton's-Resume.pdf" download>Download Resume</a>
       <h3 class="text--sm">{{setMonth()}}/{{day}}/{{year}}</h3>
     </div>
   </header>
@@ -17,7 +18,7 @@ export default {
   data() {
     return {
       name: "Shelton louis",
-  line: "These are the projects that im proud of",
+      line: "These are the projects that im proud of",
       day,
       month,
       year
@@ -36,6 +37,22 @@ export default {
 
 <style lang='scss'>
 @import "../scss/abstracts.scss";
+.download {
+  padding: 1em;
+  border-radius: 10px;
+  color: var(--dark-blue);
+  background-color: var(--yellow);
+  font-size: 1.5em;
+  &:hover,
+  &:focus {
+    border-radius: 15px;
+    filter: hue-rotate(180deg);
+  }
+  &:active {
+    filter: hue-rotate(0deg);
+    transform: scale(0.8);
+  }
+}
 .resume--header {
   @include flexCenter(space-around, center);
   @include fadeIn(500ms);

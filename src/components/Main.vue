@@ -1,21 +1,28 @@
 <template lang="pug" > 
   main.resume--main
-    <card :card1='cards[0]'/>
-    <card2 :card2='cards[1]'/>
-    <card3 :card3='cards[2]'/>
-    <card4 :card4='cards[3]'/>
-    <card5 :card5='cards[4]'/>
-    <card6 :card6='cards[5]'/>
-      
+    <card v-for='(card , index) of cards'  :card='card':key=' Math.random() + index' >
+    <template #card-slot='{singleCard:{site, img ,caption, code}}'  >
+      <div class="resume__card__top">
+          <a :href="site" target="blank">
+          <img :src="img" :alt="caption" class="resume__image" />
+          <figcaption class="resume__caption">{{caption}}</figcaption>
+      </a>
+    </div>
+    <div class="resume__card__bottom">
+      <a href='code' target="blank">
+        <svg class="icon icon--yellow">
+          <use href="../assets/social/spriteSmedia.svg#icon-github" />
+        </svg>
+      </a>
+      <a :href="site" target="blank">Website</a>
+    </div>
+     
+    </template>
+    </card>
 </template>
 
 <script>
 import Card from "./cards/Card.vue";
-import Card2 from "./cards/Card2.vue";
-import Card3 from "./cards/Card3.vue";
-import Card4 from "./cards/Card4.vue";
-import Card5 from "./cards/Card5.vue";
-import Card6 from "./cards/Card6.vue";
 export default {
   data() {
     return {
@@ -23,43 +30,32 @@ export default {
         {
           caption: "Burger Builder",
           code: "https://github.com/louiss0/burger-builder",
-          site: "https://burgerbuilderap.netlify.com"
+          site: "https://burgerbuilderap.netlify.com",
+          img: "/img/Screenshot_2019-08-11 Burger Builder.png"
         },
         {
-          caption: "Stock Trader",
-          code: "https://github.com/louiss0/stock-trader",
-          site: "https://stocktrade.netlify.com"
+          caption: "Movie Search App",
+          code: "https://github.com/louiss0/movie-app",
+          site: "https://moviesearchappex.netlify.com",
+          img: "/img/Screenshot_2019-09-24 movie-search.png"
         },
         {
-          caption: "Pixabay",
-          code: "https://github.com/louiss0/pixabay",
-          site: "https://pixabay-site.netlify.com"
+          caption: "Beach Resort",
+          code: "https://github.com/louiss0/beach-resort",
+          site: "https://luxuirous.netlify.com/",
+          img: "/img/Screenshot_2019-09-24 Luxurious Rooms.png"
         },
         {
-          caption: "Monster Slayer",
-          code: "https://github.com/louiss0/monster-slayer",
-          site: "https://monster-slayer.netlify.com"
-        },
-        {
-          caption: "Users",
-          code: "https://github.com/louiss0/users",
-          site: "https://fiveusers.netlify.com"
-        },
-        {
-          caption: "Expense App",
-          code: "https://github.com/louiss0/budget-builder",
-          site: "https://expensebudgeter.netlify.com"
+          caption: "Ecommerce Project",
+          code: "https://github.com/louiss0/ecom",
+          site: "https://ecom0.netlify.com",
+          img: "/img/Screen Shot 2019-09-24 at 17.36.57.png"
         }
       ]
     };
   },
   components: {
-    card: Card,
-    card2: Card2,
-    card3: Card3,
-    card4: Card4,
-    card5: Card5,
-    card6: Card6
+    card: Card
   }
 };
 </script>
