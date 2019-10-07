@@ -50,6 +50,12 @@ export default {
           code: "https://github.com/louiss0/ecom",
           site: "https://ecom0.netlify.com",
           img: "/img/Screen Shot 2019-09-24 at 17.36.57.png"
+        },
+        {
+          caption: "Mario Plan Project",
+          code: "https://github.com/louiss0/mario-plan",
+          site: "https://marioplan-421c1.firebaseapp.com",
+          img: "/img/Screen Shot 2019-09-24 at 17.36.57.png"
         }
       ]
     };
