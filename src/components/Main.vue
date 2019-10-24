@@ -33,12 +33,7 @@ export default {
           site: "https://burgerbuilderap.netlify.com",
           img: "/img/Screenshot_2019-08-11 Burger Builder.png"
         },
-        {
-          caption: "Movie Search App",
-          code: "https://github.com/louiss0/movie-app",
-          site: "https://moviesearchappex.netlify.com",
-          img: "/img/Screenshot_2019-09-24 movie-search.png"
-        },
+        
         {
           caption: "Beach Resort",
           code: "https://github.com/louiss0/beach-resort",
@@ -55,7 +50,7 @@ export default {
           caption: "Mario Plan Project",
           code: "https://github.com/louiss0/mario-plan",
           site: "https://marioplan-421c1.firebaseapp.com",
-          img: "/img/Screen Shot 2019-09-24 at 17.36.57.png"
+          img: "/img/Screenshot_2019-10-07 marioplan.png"
         }
       ]
     };
